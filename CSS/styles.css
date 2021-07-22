@@ -1,0 +1,307 @@
+html{
+    scroll-behavior: smooth;
+}
+#title{
+    background-color: #ff4c68;
+    overflow: hidden ;
+    padding-top: 2% ;
+    color: whitesmoke;
+   
+}
+
+/*----------------------------------container----------------------------  */
+.row h1{
+    font-family:'Merienda', cursive;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    padding: 6% 0% ;
+}
+
+.container {
+    overflow: hidden; 
+    padding-bottom: 8%;
+}
+
+/* download buttons  */
+.row button{
+    margin: 3% 4% 3% 0%;
+    font-size: 1.5rem;
+    font-family:sans-serif;
+}
+
+
+/*-------------------------------------navbar-----------------------------------  */
+
+
+/* https://stackoverflow.com/questions/20721248/how-can-i-override-bootstrap-css-styles */
+#bootstrap-overrides .nav-link{
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin: 0 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    color: whitesmoke;
+    position: relative;
+    opacity: 0.75;
+    display: inline-block;
+
+}
+
+#bootstrap-overrides .navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+  
+
+}
+
+#bootstrap-overrides .navbar{
+    padding-bottom: 4rem;
+    margin-left: -0.5rem;
+}
+
+/*------------------------ animation on navlink --------------------------*/
+#bootstrap-overrides .nav-link:hover{
+    opacity: 1;
+}
+
+#bootstrap-overrides .nav-link::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2.5px;
+    left: 50%;
+    position: absolute;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+#bootstrap-overrides .nav-link:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+/*----------- title image----------------- */
+.title-image{
+    width: 60%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
+  
+}
+
+/*-------------------------------- cards/features seciton --------------------------- */
+#features{
+    padding: 8% 18%;
+    background-color: whitesmoke;
+    position: relative;
+    /* z-index: 1; */
+    font-family:sans-serif;
+}
+
+.icon{
+    color: #ef8172;
+    margin-bottom: 1rem;     
+}
+
+.icon:hover{
+    color: #ff4c68;
+}
+p{
+    color: grey;
+    font-size: 1.2rem;
+}
+
+
+/*------------------------------ testimonial section-----------------------------------  */
+
+#testimonials{
+    text-align: center;
+    background-color: #ef8172;
+    color: whitesmoke;
+}
+
+#testimonials h2{
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+em{
+    font-size: 1.2rem;
+}
+
+.testimonial-image{
+    border-radius: 50%;
+    width: 15%;
+    margin: 3.5%;
+}
+
+
+/*---------------------------------- press-section -------------------------------- */
+#press{
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 4%;
+}
+
+
+.press-logo{
+    width: 10%;
+    margin: 0 3%;
+}
+
+.carousel-item{
+    padding: 6% 18%;
+
+}
+
+/*------------------------------- pricing section ---------------------------------*/
+
+
+
+#bootstrap-overrides #pricing .row{
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+#pricing{
+    padding: 5% 10%;
+    background-color: whitesmoke;
+    font-family: sans-serif;
+}
+
+
+#pricing .pricing-column{
+    padding: 3% 2%;
+}
+
+#pricing .pricing-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+/*------------------------------- Call to action section-------------------------- */
+
+#cta{
+    background-color: #ff4c68 ;
+    color: whitesmoke;
+    text-align: center;
+    
+}
+
+#cta h3{
+    font-size: 2.3rem;
+    padding: 4% 2%;
+    
+
+}
+
+#cta button{
+    margin: 0.5% 1.5% 3.5% 0%;
+}
+
+
+/*-------------------------------- footer section ------------------------------ */
+#footer{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 5% 8%;
+}
+#footer p{
+    margin-bottom: 0rem;
+}
+#footer .social-icons{
+    padding: 10px 20px;
+}
+
+
+/* ----------------------------media queries-----------------------------------  */
+
+@media screen and (max-width: 992px) {
+    #title{
+        text-align: center;
+    }
+    .title-image{
+        position: static;
+        transform: rotate(0);
+        height: auto;
+        width: 35%;
+
+    }
+    #features .features-column{
+        padding: 5% 0%;
+    }
+
+    #title .navbar{
+        padding-bottom: 1.3rem;
+    }
+
+    .row h1{
+        font-size: 2.6rem;
+        padding: 3% 0%;
+    
+    }
+    .row button{
+        font-size: 1.2rem;
+        margin: 2% 4% 6% 0%;
+    }
+    #title .navbar-brand{
+        font-size: 1.6rem;
+
+    }
+
+    #features p{
+        font-size: 1rem;
+    }
+   #features h3{
+        font-size: 1.7rem;
+    }
+
+    #testimonials h2{
+        font-size: 1.8rem;
+    }
+
+    #testimonials em{
+        font-size: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 1210px) and (min-width: 992px) {
+    .row h1{
+        font-size: 2.6rem;
+    }
+    .row button{
+        font-size: 1.2rem;
+    }
+    #title .navbar-brand{
+        font-size: 1.6rem;
+
+    }
+
+    #title .nav-link{
+        font-size: 0.9rem;
+        margin: 0 0.6rem;
+    }
+    
+    #features p{
+        font-size: 1rem;
+    }
+   #features h3{
+        font-size: 1.7rem;
+    }
+
+    #testimonials h2{
+        font-size: 1.8rem;
+    }
+
+    #testimonials em{
+        font-size: 1rem;
+    }
+}
+
